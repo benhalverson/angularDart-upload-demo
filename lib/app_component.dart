@@ -1,8 +1,6 @@
 import 'package:angular/angular.dart';
 import 'package:uploaddemo/src/upload/upload.dart';
 
-import 'src/todo_list/todo_list_component.dart';
-
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
 
@@ -10,8 +8,8 @@ import 'src/todo_list/todo_list_component.dart';
   selector: 'my-app',
   styleUrls: ['app_component.css'],
   templateUrl: 'app_component.html',
-  directives: [TodoListComponent, UploadComponent],
+  directives: [UploadComponent],
 )
 class AppComponent {
-  // Nothing here yet. All logic is in TodoListComponent.
+  // Nothing here yet. All logic is in UploadComponent.
 }

@@ -10,14 +10,14 @@ import 'package:dropzone_angular_dart/dropzone_angular_dart.dart';
   directives: [DROPZONE_DIRECTIVES, coreDirectives])
 class UploadComponent {
 
-  DropzoneConfiguration dropzoneConfiguration = new DropzoneConfiguration(
+  DropzoneConfiguration dropzoneConfiguration = DropzoneConfiguration(
     url: 'http://localhost:8081/upload', addRemoveLinks: true, maxFiles: 1);
   Dropzone dropzone;
   Blob uploadedFile = null;
   String uploadResponse = null;
-  NgZone zone;
 
-  UploadComponent(this.zone);
+
+  UploadComponent();
 
   void initDropzone(Dropzone dropzone) {
     this.dropzone = dropzone;
@@ -27,9 +27,7 @@ class UploadComponent {
   void success(Blob file, String response, Event event) {
     print('success(' + file.toString() + ", " + response + ", " +
       event.toString() + ")");
-    zone.run(() {
       uploadedFile = file;
       uploadResponse = response;
-    });
   }
 }
