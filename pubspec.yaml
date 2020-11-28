@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   angular: ^6.0.0
-  angular_components: ^0.13.0
+  angular_components: ^1.0.0
   dropzone_angular_dart:
     git:
       url: git@github.com:benhalverson/dropzone-angular-dart.git
